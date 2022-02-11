@@ -1,13 +1,14 @@
 <template>
   <div class="the-hero">
-    <!--<div class="the-hero__wrapper">-->
-    <h1 class="the-hero__title">infogeo</h1>
-    <img src="../assets/1.jpg" class="the-hero__img1" />
-    <img src="../assets/2.jpeg" class="the-hero__img2" />
-    <h2 class="the-hero__subtitle">
-      pewny partner - geodezja, budownictwo, architektura
-    </h2>
-    <!--</div>-->
+    <div class="the-hero__background"></div>
+    <div class="the-hero__wrapper">
+      <h1 class="the-hero__title">infogeo</h1>
+      <img src="/1.jpg" class="the-hero__img1" />
+      <img src="/2.jpeg" class="the-hero__img2" />
+      <h2 class="the-hero__subtitle">
+        pewny partner - geodezja, budownictwo, architektura
+      </h2>
+    </div>
   </div>
 </template>
 
@@ -19,16 +20,25 @@ export default {
 
 <style lang="scss" scoped>
 .the-hero {
-  background: $accent;
   margin-top: 10em;
-  padding: 0 100px;
-  display: grid;
-  grid-template-columns: 3fr 1fr 2fr;
-  row-gap: 50px;
+  padding-bottom: 50px;
 
-  // &__wrapper {
-  // position: relative;
-  //}
+  &__background {
+    background: $accent;
+    width: 100%;
+    height: 70vh;
+    position: absolute;
+    top: 30vh;
+  }
+
+  &__wrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: 3fr 1fr 2fr;
+    row-gap: 50px;
+    max-width: $layout-width;
+    margin: 0 auto;
+  }
 
   &__title,
   &__subtitle {
@@ -37,6 +47,9 @@ export default {
   &__title {
     text-transform: uppercase;
     grid-column: span 2;
+    display: flex;
+    align-items: flex-end;
+    margin: 40px;
   }
 
   &__img1,
@@ -46,17 +59,11 @@ export default {
     position: relative;
   }
 
-  &__img1 {
-    bottom: 30%;
-  }
-
-  &__img2 {
-    top: 20%;
-  }
-
   &__subtitle {
-    text-align: right;
     grid-column: span 2;
+    display: flex;
+    align-items: flex-start;
+    margin: 40px;
   }
 }
 </style>

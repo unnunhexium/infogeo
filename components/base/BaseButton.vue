@@ -17,16 +17,16 @@ export default {
 <style lang="scss" scoped>
 .base-button {
   font-family: "Open Sans";
-  font-weight: 700;
-  background: $accent;
-  color: $white;
   font-size: 18px;
-  padding: 1.125em 1.875em;
+  font-weight: 700;
   display: inline-block;
+  padding: 0.75em 1.875em;
+  color: $white;
+  background: $accent;
+  transition: background-color 0.2s, border-color 0.2s;
   text-decoration: none;
   border: none;
   cursor: pointer;
-  transition: background-color 0.2s, border-color 0.2s;
 
   &:active,
   &:focus,
